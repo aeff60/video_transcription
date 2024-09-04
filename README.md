@@ -11,13 +11,15 @@ This project is a web application built with Flask that allows users to upload v
 
 #### Project Structure
 
-- `app.py`
+- `app.py`: Main Flask application file that handles routes, file uploads, audio extraction, and transcription.
 - `static/`
-  - `styles.css`
+  - `styles.css`: CSS file for styling the web pages.
 - `templates/`
-  - `index.html`
-  - `result.html`
-- `uploads/`
+  - `index.html`: HTML template for the upload page.
+  - `result.html`: HTML template for displaying the transcription results.
+- `uploads/`: Directory where uploaded video files and extracted audio files are stored.
+- `requirements.txt`: Lists the Python dependencies required for the project.
+- `Dockerfile`: Docker configuration file for containerizing the application.
 
 #### Installation
 
@@ -64,6 +66,22 @@ This project is a web application built with Flask that allows users to upload v
 
 5. View the transcription results with timestamps on the result page.
 
+#### Running with Docker
+
+1. **Build the Docker image**:
+
+   ```bash
+   docker build -t videotranscription .
+   ```
+
+2. **Run the Docker container**:
+
+   ```bash
+   docker run -p 5000:5000 videotranscription
+   ```
+
+3. Access the application in your web browser at [http://localhost:5000](http://localhost:5000).
+
 #### File Descriptions
 
 - `app.py`: The main Flask application file that handles routes, file uploads, audio extraction, and transcription.
@@ -71,6 +89,8 @@ This project is a web application built with Flask that allows users to upload v
 - `templates/index.html`: The HTML template for the upload page.
 - `templates/result.html`: The HTML template for displaying the transcription results.
 - `uploads/`: The directory where uploaded video files and extracted audio files are stored.
+- `Dockerfile`: Contains instructions for building the Docker image.
+- `requirements.txt`: Lists all the dependencies needed for the application.
 
 #### License
 
@@ -81,4 +101,3 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 - Flask
 - OpenAI
 - MoviePy
-"# videotranscription" 
